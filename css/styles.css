@@ -1,0 +1,42 @@
+/* Variables y bases */
+
+:root {
+    --fuente-titulos: 'Montserrat', sans-serif;
+    --peso-titulos: 700;
+    --tamano-titulos: 2.5rem;
+    --fuente-subtitulos: 'Inter', sans-serif;
+    --peso-subtitulos: 400;
+    --tamano-subtitulos: 1.5rem;
+    --fuente-texto: 'Inter', sans-serif;
+    --peso-texto: 300;
+    --tamano-texto: 1rem;
+    --azul-marino: #001B2E;
+    --cian: #00A699;
+    --oro: #EAC435;
+    --blanco: #FFFFFF;
+    --negro: #000000;
+    --azul-link: #007BFF;
+}
+
+body {
+    color: var(--negro);
+}
+
+body h1 {
+    font-family: var(--fuente-titulos);
+    font-weight: var(--peso-titulos);
+    font-size: var(--tamano-titulos)
+}
+
+body h2 {
+    font-family: var(--fuente-subtitulos);
+    font-weight: var(--peso-subtitulos);
+    font-size: var(--tamano-subtitulos)
+}
+
+body p, a {
+    font-family: var(--fuente-titulos);
+    font-weight: var(--peso-titulos);
+    font-size: var(--tamano-titulos);
+    text-decoration: none;
+}
