@@ -44,5 +44,9 @@ body p {
     font-size: var(--tamano-titulos);
 }
 
+body a {
+    text-decoration: none;
+}
+
 /* Header */
 
