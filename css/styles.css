@@ -20,6 +20,10 @@
 
 body {
     color: var(--negro);
+    background-color: var(--blanco);
+    margin: 0;
+    padding: 0;
+    width: 100%;
 }
 
 body h1 {
@@ -40,3 +44,6 @@ body p, a {
     font-size: var(--tamano-titulos);
     text-decoration: none;
 }
+
+/* Header */
+
