@@ -38,11 +38,10 @@ body h2 {
     font-size: var(--tamano-subtitulos)
 }
 
-body p, a {
+body p {
     font-family: var(--fuente-titulos);
     font-weight: var(--peso-titulos);
     font-size: var(--tamano-titulos);
-    text-decoration: none;
 }
 
 /* Header */
