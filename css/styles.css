@@ -4,7 +4,6 @@
     --fuente-titulos: 'Montserrat', sans-serif;
     --peso-titulos: 700;
     --tamano-titulos: 2.5rem;
-    --fuente-subtitulos: 'Inter', sans-serif;
     --peso-subtitulos: 400;
     --tamano-subtitulos: 1.5rem;
     --fuente-texto: 'Inter', sans-serif;
@@ -24,7 +23,6 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 160px 5% 20px 5%;
     box-sizing: border-box;
     margin: 0;
 }
@@ -50,14 +48,21 @@ body h1 {
     font-weight: var(--peso-titulos);
     font-size: var(--tamano-titulos);
     color: var(--blanco);
-    margin-top: 80px;
+    margin-top: 250px;
     margin-bottom: 50px;
 }
 
 body h2 {
-    font-family: var(--fuente-subtitulos);
+    font-family: var(--fuente-texto);
     font-weight: var(--peso-subtitulos);
     font-size: var(--tamano-subtitulos)
+}
+
+body h3 {
+    font-family: var(--fuente-texto);
+    font-weight: var(--peso-texto);
+    font-size: var(--tamano-texto);
+    color: var(--blanco);
 }
 
 body p {
@@ -172,9 +177,15 @@ header::after {
 
 /* Body */
 
-section {
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main section {
     margin: 20px;
-    width: 80%;
+    width: 65%;
     background-color: var(--plateado);
     border-radius: 10px;
     display: flex;
@@ -183,34 +194,34 @@ section {
     padding: 10px;
 }
 
-section .logo-body {
+main section .logo-body {
     width: 50%;
     height: auto;
 }
 
-section .juego {
+main section .juego {
     width: 35%;
     height: auto;
 }
 
-section p {
+main section p {
     width: 50%;
 }
 
 @media (max-width: 768px) {
-    section {
+    main section {
         width: 98%;
     }
 
-    section .logo-body {
+    main section .logo-body {
         width: 90%;
     }
 
-    section .juego {
+    main section .juego {
         width: 75%;
     }
 
-    section p {
+    main section p {
         width: 85%;
     }
 }
@@ -270,4 +281,55 @@ section p {
     stroke-dasharray: 40, 310;
     stroke-dashoffset: 48;
     transition: 1.35s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+/* Footer */
+
+footer {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    background-color: var(--gris);
+    color: var(--blanco);
+}
+
+footer section {
+    padding: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.logo-footer {
+    width: 20%;
+    background-color: var(--blanco);
+}
+
+.logo-footer img {
+    width: 100%;
+    height: auto;
+}
+
+.links, .contacts {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.links h2::after, .contacts h2::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: var(--violeta);
+    margin-top: 10px;
+}
+
+.contacts img {
+    padding: 10px;
+    width: 40px;
+    height: auto;
 }
