@@ -73,7 +73,7 @@ body a {
 
 /* Header */
 
-header {
+header{
     position: fixed;
     top: 0;
     left: 0;
@@ -81,14 +81,17 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 40px 5%;
     background-color: var(--plateado);
     transition: 0.3s;
     z-index: 1000;
     box-sizing: border-box;
 }
 
-header.minimized {
+header .logo, .menu-toggle, .nav {
+    padding: 40px 5%;
+}
+
+header.minimized .logo, .menu-toggle .nav {
     padding: 15px 5%;
 }
 
@@ -157,6 +160,16 @@ header .menu-toggle span {
     }
 }
 
+header::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+
+    width: 120%;
+    height: 3px;
+    background: linear-gradient(to right, var(--violeta), var(--gris));
+}
+
 /* Body */
 
 section {
@@ -170,8 +183,13 @@ section {
     padding: 10px;
 }
 
-section img {
-    width: 60%;
+section .logo-body {
+    width: 50%;
+    height: auto;
+}
+
+section .juego {
+    width: 35%;
     height: auto;
 }
 
@@ -184,8 +202,12 @@ section p {
         width: 98%;
     }
 
-    section img {
+    section .logo-body {
         width: 90%;
+    }
+
+    section .juego {
+        width: 75%;
     }
 
     section p {
@@ -240,6 +262,7 @@ section p {
 .btn:hover {
     background: rgba(0, 0, 0, 0);
     font-weight: var(--peso-titulos);
+    color: var(--negro);
 }
 
 .btn:hover rect {
